@@ -68,7 +68,7 @@ def generate_image():
 		else:
 		    final_tablecloth.paste(north_image.resize((1568, 786)).rotate(-90, expand=True).convert("RGBA"), (240, 240), north_image.resize((1568, 786)).rotate(-90, expand=True).convert("RGBA"))
 
-		tablecloth_name = "tablecloth_%d.png" % random.getrandbits(128)
+		tablecloth_name = "tablecloth_%d.jpg" % random.getrandbits(128)
 		final_tablecloth.convert("RGB").save(ROOT_DIR + "/static/temp_tablecloth/" + tablecloth_name)
 
 		return send_from_directory(ROOT_DIR + "/static/temp_tablecloth", tablecloth_name, mimetype='image/png')
